@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://po63m4srixl4"]
+[gd_scene load_steps=19 format=3 uid="uid://po63m4srixl4"]
 
 [ext_resource type="PackedScene" uid="uid://cf0w0skqs3k64" path="res://Scenes/player.tscn" id="2_21dfl"]
 [ext_resource type="PackedScene" uid="uid://d3ajq0cms07se" path="res://Scenes/root2.tscn" id="3_okl2h"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://drg0i3rl8t2ut" path="res://Assets/Textures/b5nrbK.png" id="4_okl2h"]
 [ext_resource type="PackedScene" uid="uid://bk5n0tn4k1l0c" path="res://Scenes/Coin.tscn" id="5_4fiv6"]
 [ext_resource type="Script" uid="uid://dh81ltmyce4mu" path="res://Scripts/GameManager.gd" id="6_8fvkd"]
+[ext_resource type="FontFile" uid="uid://c50f6d8vh6vim" path="res://Assets/THSarabunNew Bold.ttf" id="6_ad2i4"]
 [ext_resource type="Texture2D" uid="uid://cnbbny7qjh2xn" path="res://Assets/Textures/coin.png" id="7_ow7xm"]
 [ext_resource type="Script" uid="uid://3fkfowiec8gm" path="res://Scripts/GameUI.gd" id="7_x8whp"]
 
@@ -45,12 +46,6 @@ adjustment_brightness = 1.06
 adjustment_contrast = 0.95
 adjustment_saturation = 1.09
 
-[sub_resource type="SystemFont" id="SystemFont_om7om"]
-font_names = PackedStringArray("Star Choco")
-
-[sub_resource type="SystemFont" id="SystemFont_ub50t"]
-font_names = PackedStringArray("Star Choco")
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_asf4q"]
 size = Vector3(128, 17, 112)
 
@@ -69,7 +64,7 @@ font_color = Color(0.996094, 0.691406, 0.261719, 1)
 [node name="DemoScene" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("2_21dfl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.7441, 10.4893, 4.43064)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.61407, 5.77495, 7.38109)
 
 [node name="Platforms" type="Node3D" parent="."]
 
@@ -170,7 +165,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 6.79178)
 [node name="Features2" type="Label3D" parent="Extras"]
 transform = Transform3D(-0.992965, 0.0134037, 0.117643, 0, 0.993572, -0.113203, -0.118404, -0.112407, -0.986583, 38.965, 11.3332, 15.062)
 text = "คุณพิชิตมันได้ยินดีด้วยยย!!"
-font = SubResource("SystemFont_om7om")
+font = ExtResource("6_ad2i4")
 font_size = 250
 outline_size = 0
 uppercase = true
@@ -178,7 +173,7 @@ uppercase = true
 [node name="Credits" type="Label3D" parent="Extras"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.30796, 5.17294, 13.0638)
 text = "นายชัชติยะ สินธุธรรม 663380032-0 Sec.1"
-font = SubResource("SystemFont_ub50t")
+font = ExtResource("6_ad2i4")
 font_size = 100
 outline_size = 0
 uppercase = true
