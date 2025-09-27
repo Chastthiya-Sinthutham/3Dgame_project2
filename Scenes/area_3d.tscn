@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvlwb34a2ipqp"]
+
+[ext_resource type="Script" uid="uid://cyqjwmtj75auu" path="res://area_3d.gd" id="1_alsi4"]
+[ext_resource type="PackedScene" uid="uid://dr0gyl7emt2s" path="res://Scenes/rock3.tscn" id="2_urqnp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_alsi4"]
+size = Vector3(0.931641, 0.155518, 0.909668)
+
+[node name="Area3D" type="Area3D"]
+script = ExtResource("1_alsi4")
+
+[node name="Root Scene" parent="." instance=ExtResource("2_urqnp")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0029377, 0.0829346, 0.0079391)
+shape = SubResource("BoxShape3D_alsi4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://j8yte31ss2c6"]
+
+[ext_resource type="PackedScene" uid="uid://bs4a5nitdp7qs" path="res://Assets/Textures/Pebble Square (1).glb" id="1_t7tip"]
+[ext_resource type="PackedScene" uid="uid://crxhublwkfiyy" path="res://Assets/Textures/Pebble Square.glb" id="2_tv015"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wnojy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vkp31"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(3.155, 0, 0, 0, 3.155, 0, 0, 0, 3.155, 0, 0, 0)
+
+[node name="Root Scene2" parent="." instance=ExtResource("1_t7tip")]
+
+[node name="Root Scene" parent="." instance=ExtResource("2_tv015")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0469237, 0, 0.38684)
+
+[node name="Root Scene3" parent="." instance=ExtResource("1_t7tip")]
+transform = Transform3D(-0.994881, -0.0203202, 0.0989922, 0, 0.979576, 0.201078, -0.101056, 0.200049, -0.974561, -0.326236, 0, 0)
+
+[node name="Root Scene4" parent="." instance=ExtResource("2_tv015")]
+transform = Transform3D(-0.994881, -0.0203202, 0.0989922, 0, 0.979576, 0.201078, -0.101056, 0.200049, -0.974561, -0.37316, 0, 0.38684)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(6.41, 0, 0, 0, 6.41, 0, 0, 0, 6.41, 0.293, -0.107, 0.24)
+physics_material_override = SubResource("PhysicsMaterial_wnojy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(13.423, 0, 0, 0, 13.423, 0, 0, 0, 13.423, -0.135132, 0.0341586, 0.0463201)
+shape = SubResource("BoxShape3D_vkp31")
